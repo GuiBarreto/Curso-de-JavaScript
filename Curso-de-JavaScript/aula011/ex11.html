@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasileiro ou Estrangeiro</title>
+</head>
+<body>
+    <h1>Qual país você vive? <input type="text" name="tpais" id="tpais"></h1>
+    <input type="button" value="Analisando" onclick="verificar()">
+    <div id="onde">
+        <script>
+            function verificar() {
+                var tpais = document.querySelector('input#tpais')
+                var onde = document.querySelector('div#onde')
+                var p = (tpais.value)
+                onde.innerHTML = `<p><strong>${p}</strong> é seu país.</p>`
+                if(p=='Brasil') {
+                    onde.innerHTML += '<p>Logo você é <strong>Brasileiro</strong>.</p>' 
+                }else {
+                    onde.innerHTML += '<p>Logo você é <strong>Estrangeiro</strong>.</p>'
+                }
+            }
+        </script>
+
+    </div>
+</body>
+</html>
